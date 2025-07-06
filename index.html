@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️</title>
+    
+    <style>
+        html, body {
+            height: 100%;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 27px;
+            font-weight: 600;
+            max-width: 400px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        button {
+            width: 260px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 28px;
+            background-color: white;
+            border-radius: 15px;
+            border: 4px solid rgb(200, 8, 8);
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(255, 239, 239);
+        }
+        button:active {
+            background-color: rgb(255, 113, 113);
+            border-color: #ffd2d2;
+            color: white;
+        }
+
+        iframe {
+            display: none;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Oi meu bem.<br>Já faz um tempo que queria te falar isso...<br><br> Você aceita?</p>
+    <br>
+    <img id="imagem" src="imagem/img.png" alt="Imagem Romântica">
+    
+    <iframe id="youtubeVideo" 
+        width="560" 
+        height="315" 
+        src="" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+     
+    <button id="playButton">Clique aqui❤️</button>
+
+    <script>
+        const iframe = document.getElementById('youtubeVideo');  
+        const playButton = document.getElementById('playButton'); 
+        const text = document.getElementById('text'); 
+        const imagem = document.getElementById('imagem'); 
+
+        
+        function Delirios() {
+            iframe.src = "https://www.youtube.com/embed/IL948IkM4sU?autoplay=1"; 
+            iframe.style.display = 'block'; 
+            text.innerHTML = "QUERIA DIZER QUE EU GOSTO MUITOOO DE VOCÊEEEE ❤️❤️❤️"; 
+            playButton.style.display = "none"; 
+            imagem.style.display = "none"; 
+        }
+
+        
+        playButton.addEventListener('click', Delirios);
+    </script>
+</body>
+</html>
